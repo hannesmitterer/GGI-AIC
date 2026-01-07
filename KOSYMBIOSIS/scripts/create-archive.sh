@@ -14,7 +14,16 @@ echo ""
 ARCHIVE_NAME="kosymbiosis-archive.zip"
 CHECKSUM_FILE="checksum.sha256"
 TIMESTAMP=$(date -u +"%Y%m%d_%H%M%S")
-WORK_DIR="/home/runner/work/GGI-AIC/GGI-AIC"
+
+# Detect working directory dynamically
+# If script is in KOSYMBIOSIS/scripts, go up two levels
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ "$SCRIPT_DIR" == */KOSYMBIOSIS/scripts ]]; then
+    WORK_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+else
+    # Fallback to current directory
+    WORK_DIR="$(pwd)"
+fi
 
 # Navigate to working directory
 cd "$WORK_DIR"

@@ -27,7 +27,13 @@ echo "========================================================================"
 echo ""
 
 # Configuration
-WORK_DIR="/home/runner/work/GGI-AIC/GGI-AIC"
+# Detect working directory dynamically
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ "$SCRIPT_DIR" == */KOSYMBIOSIS/scripts ]]; then
+    WORK_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+else
+    WORK_DIR="$(pwd)"
+fi
 SCRIPTS_DIR="$WORK_DIR/KOSYMBIOSIS/scripts"
 
 cd "$WORK_DIR"

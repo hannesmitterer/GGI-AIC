@@ -13,9 +13,16 @@ echo ""
 # Configuration
 ARCHIVE_NAME="kosymbiosis-archive.zip"
 CHECKSUM_FILE="checksum.sha256"
-WORK_DIR="/home/runner/work/GGI-AIC/GGI-AIC"
 RELEASE_TAG="v1.0.0-KOSYMBIOSIS-FINAL"
 RELEASE_NAME="KOSYMBIOSIS Project - Final Archive"
+
+# Detect working directory dynamically
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ "$SCRIPT_DIR" == */KOSYMBIOSIS/scripts ]]; then
+    WORK_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+else
+    WORK_DIR="$(pwd)"
+fi
 
 # Navigate to working directory
 cd "$WORK_DIR"
