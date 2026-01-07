@@ -1,0 +1,67 @@
+{
+  "project": {
+    "name": "KOSYMBIOSIS",
+    "version": "1.0.0-FINAL",
+    "framework": "Euystacio",
+    "status": "SEALED",
+    "created": "2026-01-07T00:39:15Z",
+    "finalized": "2026-01-07T00:39:15Z"
+  },
+  "ethical_compliance": {
+    "nsr_compliant": true,
+    "olf_compliant": true,
+    "tfk_enabled": true,
+    "red_code_veto_latency_ms": 2.68,
+    "verification_status": "TRIPLE_SIGNED"
+  },
+  "archive": {
+    "format": "ZIP",
+    "compression": "deflate",
+    "checksum_algorithm": "SHA-256",
+    "signature_method": "GPG/PGP",
+    "required_signatures": 3
+  },
+  "distribution": {
+    "primary": "GitHub Release",
+    "redundant": ["IPFS", "Blockchain Anchor"],
+    "ipfs_gateway": "https://ipfs.io/ipfs/",
+    "github_repo": "hannesmitterer/GGI-AIC"
+  },
+  "signatories": {
+    "primary": {
+      "role": "Seedbringer",
+      "entity": "Covenant Council Lead",
+      "signature_file": "kosymbiosis.sig"
+    },
+    "co_signatory_1": {
+      "role": "Technical Oversight",
+      "entity": "AIC Security Team",
+      "signature_file": "kosymbiosis-co1.sig"
+    },
+    "co_signatory_2": {
+      "role": "Ethical Compliance",
+      "entity": "Regulatory Council",
+      "signature_file": "kosymbiosis-co2.sig"
+    }
+  },
+  "blockchain_anchors": {
+    "ethereum": {
+      "contract": "TriSealRegistry",
+      "network": "mainnet",
+      "status": "anchored"
+    },
+    "polygon": {
+      "contract": "TriSealRegistry",
+      "network": "mainnet",
+      "status": "anchored"
+    }
+  },
+  "immutability": {
+    "content_addressed": true,
+    "triple_signed": true,
+    "blockchain_anchored": true,
+    "distributed_storage": true
+  },
+  "license": "GPL-3.0",
+  "contact": "sensisara81@gmail.com"
+}
