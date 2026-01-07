@@ -55,7 +55,7 @@ All three signatures must be valid for complete verification.
 ### 3. Archive Integrity
 The SHA-256 checksum of the archive:
 ```
-[CHECKSUM_PLACEHOLDER]
+0b092decb31dbdffceb9db30a71281d047a76aad62a69ba713ff75acde60d67f
 ```
 
 ### 4. IPFS Distribution

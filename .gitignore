@@ -1,0 +1,42 @@
+# KOSYMBIOSIS Archive Files
+# Note: The actual archive, checksum, and signatures are committed
+# as they represent the finalized state of the project.
+# This gitignore prevents accidental commits of test/temp files.
+
+# Temporary IPFS files
+ipfs-cid.txt
+
+# Test artifacts
+/tmp/
+*.bak
+*.tmp
+
+# Archive staging directories
+*-staging-*/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Node modules (if any)
+node_modules/
+
+# Logs (except KOSYMBIOSIS logs which are intentional)
+*.log
+nohup.out
+
+# Build artifacts
+dist/
+build/
